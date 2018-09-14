@@ -11,6 +11,7 @@ from sqlalchemy import create_engine
 from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
+
 app = Flask(__name__)
 
 
@@ -95,6 +96,8 @@ def samples(sample):
         "otu_labels": sample_data.otu_label.tolist(),
     }
     return jsonify(data)
+    
+    
 
 
 if __name__ == "__main__":
